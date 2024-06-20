@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="res/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+
+    <title>DwB To-Do App</title>
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <header>
+                <h1>DwB ToDoist <img src="./aset/logo_todolist.png" alt="" class="logo-todolist"></h1>
+                <div class="input-section">
+                    <input id="input-box" type="text" placeholder="Write your task here...">
+                    <button onclick="addTask()">
+                        <img src="./aset/add_icon.png" alt="add">
+                    </button>
+                </div>
+            </header>
+
+            <div class="box-message">
+                <span class="message"></span>
+                <button onclick="closeAlertMessage()">
+                    <img src="./aset/cross_icon.png" alt="X">
+                </button>
+            </div>
+
+            <div class="task-container">
+                <ul class="list-task">
+                    <!-- <li class="checked">hello</li>                    
+                    <li>world</li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+/* poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800;900&display=swap');
+/* Lobster & Raleway */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #215f00, #d7d7c4);
+    padding: 1px;
+}
+
+.todo-app {
+    width: 80%;
+    max-width: 540px;
+    background: #fff;
+    margin: 69px auto 80px;
+    padding: 40px 30px 55px;
+    border-radius: 12px;
+}
+
+.todo-app .box-message {
+    width: 75%;
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px auto;
+    padding: 15px 0;
+    background: linear-gradient(to bottom, #8fdb66, #cacaca);
+    border-radius: 30px;
+    display: none;
+}
+
+.todo-app .box-message .message {
+    margin-left: 24px;
+    text-align: center;
+}
+
+.todo-app .box-message button {
+    border-radius: 50%;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.todo-app .box-message button:hover {
+    background: #308304;
+}
+
+.todo-app .box-message button img {
+    width: 25px;
+    height: 25px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 450;
+}
+
+header h1 img {
+    width: 75px;
+}
+
+header .input-section {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #dcdcdc;
+    border-radius: 35px;
+    padding-left: 6%;
+}
+
+header .input-section input {
+    width: 70%;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 20;
+}
+
+header .input-section button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    border-radius: 35px;
+    padding: 10px 6%;
+    background: #308304;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+header .input-section button:hover {
+    background: #51902f;
+}
+
+header .input-section button img {
+    width: 35px;
+}
+
+
+.task-container {
+    margin-top: 35px;
+    width: 100%;
+}
+
+.task-container .list-task li {
+    list-style: none;
+    padding: 12px 8px 12px 50px;
+    font-size: 14px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.task-container .list-task li.checked {
+    color: #777;
+    text-decoration: line-through;
+}
+
+.task-container .list-task li span {
+    position: absolute;
+    right: 0;
+    top: 6px;
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    background-image: url(./aset/remove_task_icon.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.task-container .list-task li span:hover {
+    border: #dcdcdc solid 3px;
+}
+
+.task-container .list-task li::before {
+    content: '';
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background-image: url(./aset/uncheck_green_icon.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    top: 10px;
+    left: 8px;
+}
+
+.task-container .list-task li.checked::before {
+    background-image: url(./aset/checked_icon.png);
+}
+
+
+@media screen and (max-width: 720px) {
+    header h1 {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    header .input-section {
+        width: 100%;
+    }
+
+    header img {
+        width: 50px;
+    }
+
+    .todo-app .box-message {
+        width: 90%;
+    }
+
+    .todo-app .box-message .message {
+        font-size: 12px;
+    }
+
+    .todo-app .box-message button img {
+        width: 20px;
+        height: 20px;
+    }
+  }
