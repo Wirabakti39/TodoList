@@ -13,17 +13,18 @@
 .container {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(to bottom, #215f00, #d7d7c4);
+    background: linear-gradient(240deg, #663300, #fff, #663300);
     padding: 1px;
 }
 
 .todo-app {
     width: 80%;
     max-width: 540px;
-    background: #fff;
-    margin: 69px auto 80px;
+    background: #fafafa;
+    margin: 69px auto 30px;
     padding: 40px 30px 55px;
     border-radius: 12px;
+    box-shadow: 0 0 10px #663300;
 }
 
 .todo-app .box-message {
@@ -33,7 +34,8 @@
     align-items: center;
     margin: 15px auto;
     padding: 15px 0;
-    background: linear-gradient(to bottom, #8fdb66, #cacaca);
+    background: linear-gradient(135deg, #8fdb66, #ffffff);
+    box-shadow: 1px 0.4px 2px #8fdb66;
     border-radius: 30px;
     display: none;
 }
@@ -51,10 +53,15 @@
     align-items: center;
     margin-right: 20px;
     cursor: pointer;
+    transition: ease 0.4s;
 }
 
 .todo-app .box-message button:hover {
-    background: #308304;
+    scale: 1.1;
+}
+
+.todo-app .box-message button:active {
+    scale: 0.9;
 }
 
 .todo-app .box-message button img {
@@ -74,12 +81,26 @@ header {
 header h1 {
     display: flex;
     align-items: center;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Lobster', sans-serif;
     font-weight: 450;
+    font-size: 32px;
+    letter-spacing: 3px;
+    color: #48cd00;
+    text-shadow: -2.5px 2.2px 0 #663300;
 }
 
-header h1 img {
-    width: 75px;
+header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo .logo-img {
+    background-image: url(./aset/logo_todolist-removebg-preview.png);
+    background-size: cover;
+    background-position: center;
+    width: 40px;
+    height: 40px;
 }
 
 header .input-section {
@@ -87,9 +108,10 @@ header .input-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #dcdcdc;
+    background: #fefefe;
     border-radius: 35px;
     padding-left: 6%;
+    box-shadow: -0.5px 0.8px 5px #8fdb66;
 }
 
 header .input-section input {
@@ -99,6 +121,7 @@ header .input-section input {
     background: transparent;
     padding: 10px;
     font-weight: 20;
+    color: #000000;
 }
 
 header .input-section button {
@@ -109,14 +132,16 @@ header .input-section button {
     outline: none;
     border-radius: 35px;
     padding: 10px 6%;
-    background: #308304;
+    background: #48cd00;
     color: #fff;
     cursor: pointer;
     font-size: 16px;
+    box-shadow: -1.2px 0 3px #8fdb66;
+    transition: ease-in-out 0.2s;
 }
 
 header .input-section button:hover {
-    background: #51902f;
+    background: #8fdb66;
 }
 
 header .input-section button img {
@@ -131,7 +156,7 @@ header .input-section button img {
 
 .task-container .list-task li {
     list-style: none;
-    padding: 12px 8px 12px 50px;
+    padding: 12px 8px 12px 70px;
     font-size: 14px;
     user-select: none;
     cursor: pointer;
@@ -145,7 +170,7 @@ header .input-section button img {
 
 .task-container .list-task li span {
     position: absolute;
-    right: 0;
+    left: 0;
     top: 6px;
     width: 35px;
     height: 35px;
@@ -169,12 +194,30 @@ header .input-section button img {
     background-size: cover;
     background-position: center;
     border-radius: 50%;
-    top: 10px;
-    left: 8px;
+    top: 11px;
+    left: 40px;
 }
 
 .task-container .list-task li.checked::before {
     background-image: url(./aset/checked_icon.png);
+}
+
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 30px;
+}
+
+footer .footer-contaier span {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    word-spacing: 1px;
+    color: #663300;
+    text-shadow: -1px 0.6px 0 gray;
 }
 
 
@@ -190,6 +233,10 @@ header .input-section button img {
 
     header img {
         width: 50px;
+    }
+
+    .todo-app {
+        padding: 40px 15px 55px;
     }
 
     .todo-app .box-message {
